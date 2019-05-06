@@ -75,11 +75,11 @@
 
 #### Version 2
 
-`Ingredients` -|--< `Recipes`
-
-**Ingredients** belongs to **Recipe**
+`Recipes` -|--< `Ingredients`
 
 **Recipe** has many **Ingredients**
+
+**Ingredients** belongs to **Recipe**
 
 <table style="display:inline">
   <th colspan="2" style="text-align:center">Ingredients</th>
