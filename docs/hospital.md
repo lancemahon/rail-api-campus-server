@@ -155,9 +155,11 @@
 </table>
 
 #### Version 3
-
-`Patients` -|--< `Appointments` >--|- `Doctors`
-
+```
+Patients -|--< Appointments >--|- Doctors
+ \/                                    |
+  --------------------------------------
+```
 **Patients** have many **Doctors** through **Appointments**
 
 **Doctors** have many **Patients** through **Appointments**
