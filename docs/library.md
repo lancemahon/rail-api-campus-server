@@ -125,7 +125,7 @@
 
 #### Version 3
 
-`Books` -|--< `Authors`
+`Authors` -|--< `Books`
 
 `Books` -|--< `Loans` >--|- `Borrowers`
 
