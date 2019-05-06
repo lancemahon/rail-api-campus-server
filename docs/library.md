@@ -80,7 +80,7 @@
 
 #### Version 2
 
-`Books` -|--< `Authors`
+`Authors` -|--< `Books`
 
 **Books** belong to **Author**
 
