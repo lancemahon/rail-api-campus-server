@@ -93,7 +93,7 @@
 
 #### Version 2
 
-`Patients` -|--< `Doctors`
+`Doctors` -|--< `Patients`
 
 **Patients** belong to **Doctor**
 
