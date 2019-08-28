@@ -4,8 +4,16 @@ Rails.application.routes.draw do
   # RESTful routes
   get '/books' => 'books#index'
   get '/books/:id' => 'books#show'
+  delete '/books/:id' => 'books#destroy'
+
   get '/patients' => 'patients#index'
+  get '/patients/:id' => 'patients#show'
+  delete '/patients/:id' => 'patients#destroy'
+
   get '/ingredients' => 'ingredients#index'
+  get '/ingredients/:id' => 'ingredients#show'
+  delete '/ingredients/:id' => 'ingredients#destroy'
+
   resources :examples, except: %i[new edit]
 
   # Custom routes
