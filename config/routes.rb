@@ -2,6 +2,7 @@
 
 Rails.application.routes.draw do
   # RESTful routes
+  get '/books' => 'books#index'
   resources :examples, except: %i[new edit]
 
   # Custom routes
