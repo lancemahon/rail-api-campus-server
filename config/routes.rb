@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # RESTful routes
   get '/books' => 'books#index'
   get '/patients' => 'patients#index'
+  get '/ingredients' => 'ingredients#index'
   resources :examples, except: %i[new edit]
 
   # Custom routes
