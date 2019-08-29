@@ -10,10 +10,12 @@ Rails.application.routes.draw do
   get '/patients' => 'patients#index'
   get '/patients/:id' => 'patients#show'
   delete '/patients/:id' => 'patients#destroy'
+  patch '/patients/:id' => 'patients#update'
 
   get '/ingredients' => 'ingredients#index'
   get '/ingredients/:id' => 'ingredients#show'
   delete '/ingredients/:id' => 'ingredients#destroy'
+  patch '/ingredients/:id' => 'ingredients#update'
 
   resources :examples, except: %i[new edit]
 

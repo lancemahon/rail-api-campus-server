@@ -16,6 +16,18 @@ class IngredientsController < ApplicationController
     head :no_content
   end
 
+  def ingredient_params
+    params.require(:ingredient).permit(:name, :unit)
+  end
+
+  def update
+    if @ingredient.update(ingredient_params)
+      render json: @ingredient
+    else
+      render json: @ingredient.errors, status: unprocessable_entity
+    end
+  end
+
   def set_ingredient
     @ingredient = Ingredient.find(params[:id])
   end
