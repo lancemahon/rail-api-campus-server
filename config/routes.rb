@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :authors, except: %i[new edit]
   # RESTful routes
   resources :books, except: %i[new edit]
   resources :patients, except: %i[new edit]
@@ -18,10 +19,10 @@ Rails.application.routes.draw do
   # delete '/patients/:id' => 'patients#destroy'
   # patch '/patients/:id' => 'patients#update'
 
-  get '/ingredients' => 'ingredients#index'
-  get '/ingredients/:id' => 'ingredients#show'
-  delete '/ingredients/:id' => 'ingredients#destroy'
-  patch '/ingredients/:id' => 'ingredients#update'
+  # get '/ingredients' => 'ingredients#index'
+  # get '/ingredients/:id' => 'ingredients#show'
+  # delete '/ingredients/:id' => 'ingredients#destroy'
+  # patch '/ingredients/:id' => 'ingredients#update'
 
   resources :examples, except: %i[new edit]
 

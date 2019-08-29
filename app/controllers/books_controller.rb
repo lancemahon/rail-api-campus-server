@@ -34,11 +34,11 @@ class BooksController < ApplicationController
       render json: @book
     else
       render json: @book.errors, status: unprocessable_entity
+    end
   end
-end
 
   def book_params
-    params.require(:book).permit(:title, :author)
+    params.require(:book).permit(:title, :author_id)
   end
 
   def set_book
