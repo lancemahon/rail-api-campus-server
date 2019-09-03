@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :recipes
-  resources :doctors
   # RESTful routes
+  resources :recipes, except: %i[new edit]
+  resources :doctors, except: %i[new edit]
   resources :authors, except: %i[new edit]
   resources :books, except: %i[new edit]
   resources :patients, except: %i[new edit]
