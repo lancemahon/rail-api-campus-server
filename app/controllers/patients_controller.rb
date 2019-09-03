@@ -30,7 +30,8 @@ class PatientsController < ApplicationController
     params.require(:patient).permit(:first_name,
                                     :last_name,
                                     :born_on,
-                                    :diagnosis)
+                                    :diagnosis,
+                                    :doctor_id)
   end
 
   def update
