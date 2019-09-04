@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :meals
+  resources :appointments
+  resources :loans
   # RESTful routes
+  resources :borrowers, except: %i[new edit]
   resources :recipes, except: %i[new edit]
   resources :doctors, except: %i[new edit]
   resources :authors, except: %i[new edit]
